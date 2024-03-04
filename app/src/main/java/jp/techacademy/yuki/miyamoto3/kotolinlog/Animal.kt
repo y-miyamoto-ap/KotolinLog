@@ -1,15 +1,5 @@
 package jp.techacademy.yuki.miyamoto3.kotolinlog
 
-abstract class Animal {
-    // プロパティ
-    var name: String
-    var age: Int
-
-    // 引数付きコンストラクタ
-    constructor(name: String, age: Int) {
-        this.name = name
-        this.age = age
-    }
-
+abstract class Animal(var name: String, var age: Int) {
     abstract fun say()
 }

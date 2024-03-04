@@ -2,12 +2,10 @@ package jp.techacademy.yuki.miyamoto3.kotolinlog
 
 import android.util.Log
 
-open class Human: Animal, Thinkable {
-    // 引数付きコンストラクタ
+open class Human(
+    name: String, age: Int,
     var hobby: String
-    constructor(name: String, age: Int, hobby:String): super(name, age) {
-        this.hobby = hobby
-    }
+) : Animal(name, age), Thinkable {
 
     // Animalクラスのメソッドをオーバーライド
     override fun say() {

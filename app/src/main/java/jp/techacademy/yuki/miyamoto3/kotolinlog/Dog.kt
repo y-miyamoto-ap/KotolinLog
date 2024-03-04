@@ -2,11 +2,7 @@ package jp.techacademy.yuki.miyamoto3.kotolinlog
 
 import android.util.Log
 
-open class Dog: Animal, Movable {
-    // 引数付きコンストラクタ
-    constructor(name: String, age: Int): super(name, age) {
-    }
-
+open class Dog(name: String, age: Int) : Animal(name, age), Movable {
     // Animalクラスのメソッドをオーバーライド
     override fun say() {
         Log.d("kotlintest", this.name + "(" + this.age + "歳)" + "「ワンワン」")
